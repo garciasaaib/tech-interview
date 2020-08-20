@@ -1,0 +1,63 @@
+
+
+
+<p align='center'>
+        <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
+</p>
+
+
+<h1 align='center'>spyOn</h1>
+
+<div>
+<p align='center'>Implementa tu propia versión de la función spyOn que hace lo
+siguiente:</p>
+
+- Toma una función como parametro
+- Devuelve una función spy que toma cualquier numero de argumentos
+- spy llama a la función y devuelve lo que ella devuelve
+- spy tiene los siguientes metodos:
+    - .getCallCount(): Devuelve la cantidad de veces que el spy fue llamado
+    - .wasCalledWith(val): devuelve true si la función fue alguna vez llamada con ese valor, else false
+    - .returned(val) devuelve true si alguna vez devolvió ese valor.
+
+<br/>
+<br/>
+<h2> Ejemplos: </h2>
+<pre><code>function adder(n1, n2) { return n1 + n2; }
+
+const adderSpy = spyOn( adder );
+
+adderSpy.getCallCount(); // 0
+
+adderSpy(2, 4); // returns 6
+adderSpy.getCallCount(); // 1
+
+adderSpy(3, 5); // returns 8
+adderSpy.getCallCount(); // 2
+adderSpy.wasCalledWith(2); // true
+adderSpy.wasCalledWith(0); // false
+adderSpy.returned(6); // true
+adderSpy.returned(9); // false
+</code></pre>
+<br/>
+<br/>
+<h1> Solución</h1>
+<br/>
+<pre><code>
+const spyOn = (fn) => {
+    let callCount = 0;
+    const calledWith = new Set();
+    const returns = new Set();
+    const spy = (...args) => {
+        callCount += 1;
+        args.forEach(arg => calledWith.add(arg));
+        const result = fn(...args);
+        returns.add(result);
+        return result;
+    }
+    spy.getCallCount = () => callCount;
+    spy.wasCalledWith = (val) => calledWith.has(val);
+    spy.returned = (val) => returns.has(val);
+    return spy;
+}
+</code></pre>
