@@ -1,25 +1,25 @@
 
 
 
-<p align='center'>
+<p >
         <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
 
-<h1 align='center'>Multi-Dimensional SumArray</h1>
+<h1 >Multi-Dimensional SumArray</h1>
 
 <div>
-<p align='center'>Tenes un arreglo que consiste de sub-arreglos de longitud variada. Escribe unafunción para encontrar la suma de cadaelemento del arreglo.</p>
+<p >Tenes un arreglo que consiste de sub-arreglos de longitud variada. Escribe unafunción para encontrar la suma de cadaelemento del arreglo.</p>
 <hr>
 
 
-<h4 align='center'>
+<h4 >
 mdArraySum([1,2,3,4]); //should return  10
 </h4>
-<h4 align='center'>
+<h4 >
 mdArraySum([ [2,4] , [1], [4,2,1] ]); //should return  14
 </h4>
-<h4 align='center'>
+<h4 >
 mdArraySum([ 2, [3,4], 5, [-3, [6 , [ 4,5 ] ] ] ]); //should return  26
 </h4>
 </div>
@@ -33,13 +33,13 @@ mdArraySum([ 2, [3,4], 5, [-3, [6 , [ 4,5 ] ] ] ]); //should return  26
     - si es un arreglo agrega la suma de todos suselementos a la suma.
 - Devuelve el total
 
-<h3  align='center'>Pero como podemos calucular la suma enlos elementos de un sub-arreglo de un sub-arreglo ?
+<h3  >Pero como podemos calucular la suma enlos elementos de un sub-arreglo de un sub-arreglo ?
 </h3>
 <br/>
-<p align='center'>
+<p >
         <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRAAg6dPdk60uLBQfkGVH-G1vQbN_jP81uzPA&usqp=CAU' </img>
 </p>
-<p align='center'> RECURSION!! </p>
+<p > RECURSION!! </p>
 <br/>
 <br/>
 <br/>
@@ -61,11 +61,11 @@ const mdArraySum = (arr) => {
 </code></pre>
 
 <div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div align="center">
+    <div >
         Complejidad de tiempo
             <p>???</p>
     </div>
-    <div align="center">
+    <div >
         Complejidad de espacio
             <p>???</p>
     </div>
@@ -90,12 +90,12 @@ const mdArraySum = (arr) => {
 </code></pre>
 
 <div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div align="center">
+    <div >
         Complejidad de tiempo
             <p>O(n)</p><br/>
             <p>Donde n es la cantidad deelementos en todos los arreglos</p>
     </div>
-    <div align="center">
+    <div >
         Complejidad de espacio
             <p>O(n)</p><br/>
             <p>Donde n es el nivelmáximo de profundidad

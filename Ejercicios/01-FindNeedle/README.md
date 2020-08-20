@@ -58,11 +58,11 @@ const findNeedle = (haystack, needle) => {
 </code></pre>
 
 <div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div align="center">
+    <div >
         Complejidad de tiempo
             <p>???</p>
     </div>
-    <div align="center">
+    <div >
         Complejidad de espacio
             <p>???</p>
     </div>
@@ -89,11 +89,11 @@ const findNeedle = (haystack, needle) => {
 </code></pre>
 
 <div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div align="center">
+    <div >
         Complejidad de tiempo
             <p>O(n*m)</p>
     </div>
-    <div align="center">
+    <div >
         Complejidad de espacio
             <p>0(1)</p>
     </div>
@@ -121,11 +121,11 @@ const findNeedle = (haystack, needle) => {
 </code></pre>
 
 <div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div align="center">
+    <div >
         Complejidad de tiempo
             <p>O(n*m)</p>
     </div>
-    <div align="center">
+    <div >
         Complejidad de espacio
             <p>0(1)</p>
     </div>
@@ -148,11 +148,11 @@ function findNeedle2(haystack, needle){
 </code></pre>
 
 <div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div align="center">
+    <div >
         Complejidad de tiempo
             <p>???</p>
     </div>
-    <div align="center">
+    <div >
         Complejidad de espacio
             <p>???</p>
     </div>
@@ -175,11 +175,11 @@ function findNeedle2(haystack, needle){
 </code></pre>
 
 <div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div align="center">
+    <div >
         Complejidad de tiempo
             <p>???</p>
     </div>
-    <div align="center">
+    <div >
         Complejidad de espacio
             <p>???</p>
     </div>

@@ -1,17 +1,17 @@
 
 
 
-<p align='center'>
+<p >
         <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
 
-<h1 align='center'>Subset Sum</h1>
+<h1 >Subset Sum</h1>
 
 <div>
-<p align='center'>Dado una suma target y un arreglo de números positivos, devolvé true si cualquier combinación de numeros en el arreglo suma el target.</p>
+<p >Dado una suma target y un arreglo de números positivos, devolvé true si cualquier combinación de numeros en el arreglo suma el target.</p>
 <br/>
-<p align='center'>Cada numero en el arreglo solo se puede usar una vez. Devolvé false si los numeros no pueden ser usados para sumar el target.</p>
+<p >Cada numero en el arreglo solo se puede usar una vez. Devolvé false si los numeros no pueden ser usados para sumar el target.</p>
 <br/>
 <br/>
 

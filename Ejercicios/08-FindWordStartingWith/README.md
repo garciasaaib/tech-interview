@@ -1,16 +1,16 @@
 
 
 
-<p align='center'>
+<p >
         <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
 
-<h1 align='center'>Find Word Starting With</h1>
+<h1 >Find Word Starting With</h1>
 
 <div>
-<h2 align='center'>La Pregunta </h2>
-<p align='center'>Dado un "libro" y un string para buscar,  devolver todos los indices donde la palabra empieza con ese string. El libro vendrá con dos cosas: un id y un texto. La busqueda tiene que ser case insensitive.</p>
+<h2 >La Pregunta </h2>
+<p >Dado un "libro" y un string para buscar,  devolver todos los indices donde la palabra empieza con ese string. El libro vendrá con dos cosas: un id y un texto. La busqueda tiene que ser case insensitive.</p>
 <hr>
 <br/>
 <pre><code>
@@ -94,8 +94,8 @@ const findWordsStartingWithNaive = (book, query) => {
 </div>
 <br/>
 <br/>
-<h2 align='center'>O podemos intentar usar un trie</h2>
-<p align='center'>um... que es un trie???</p>
+<h2 >O podemos intentar usar un trie</h2>
+<p >um... que es un trie???</p>
 <br/>
 <br/>
 <h1>Ejemplo de un Trie</h1>

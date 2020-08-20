@@ -1,28 +1,28 @@
 
 
 
-<p align='center'>
+<p >
         <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
 
-<h1 align='center'>Has Balance Brackets</h1>
+<h1 >Has Balance Brackets</h1>
 
 <div>
-<p align='center'>Crear un bracket validator, que chequee que estén balanceados correctamente. Los brackets validos son los siguientes:</p>
+<p >Crear un bracket validator, que chequee que estén balanceados correctamente. Los brackets validos son los siguientes:</p>
 <hr>
 
 
-<h4 align='center'>
+<h4 >
 { [ ] ( ) }" debería devolver true
 </h4>
-<h4 align='center'>
+<h4 >
 { [ ( ] ) }" debería devolver false
 </h4>
-<h4 align='center'>
+<h4 >
 { [ }" debería devolver false
 </h4>
-<h4 align='center'>
+<h4 >
 { [ ( [ { ( )[ ]{ } } ] ) ] }" debería devolver true
 </h4>
 </div>

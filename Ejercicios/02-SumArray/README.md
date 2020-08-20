@@ -44,11 +44,11 @@ functionsumArray (arr, n) {
 </code></pre>
 
 <div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div align="center">
+    <div >
         Complejidad de tiempo
             <p>???</p>
     </div>
-    <div align="center">
+    <div >
         Complejidad de espacio
             <p>???</p>
     </div>
@@ -72,11 +72,11 @@ functionsumArray (arr, n) {
 </code></pre>
 
 <div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div align="center">
+    <div >
         Complejidad de tiempo
             <p>O(n^2)</p>
     </div>
-    <div align="center">
+    <div >
         Complejidad de espacio
             <p>0(1)</p>
     </div>
@@ -107,11 +107,11 @@ function sumArray2 (arr, n) {
 </code></pre>
 
 <div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div align="center">
+    <div >
         Complejidad de tiempo
             <p>???</p>
     </div>
-    <div align="center">
+    <div >
         Complejidad de espacio
             <p>???</p>
     </div>
@@ -142,11 +142,11 @@ function sumArray2 (arr, n) {
 </code></pre>
 
 <div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div align="center">
+    <div >
         Complejidad de tiempo
             <p>O(n)</p>
     </div>
-    <div align="center">
+    <div >
         Complejidad de espacio
             <p>O(1)</p>
     </div>

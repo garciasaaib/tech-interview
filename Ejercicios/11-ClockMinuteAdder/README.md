@@ -1,15 +1,15 @@
 
 
 
-<p align='center'>
+<p >
         <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
 
-<h1 align='center'>Clock Minute Adder</h1>
+<h1 >Clock Minute Adder</h1>
 
 <div>
-<p align='center'>Dada una hora en string en formato HH:MM, y un numero de minutos, devolver la nueva hora pasado esos minutos. El reloj es de 12 horas y tiene que devolverse en el formato HH:MM. Recuerda que no existe las 00hs</p>
+<p >Dada una hora en string en formato HH:MM, y un numero de minutos, devolver la nueva hora pasado esos minutos. El reloj es de 12 horas y tiene que devolverse en el formato HH:MM. Recuerda que no existe las 00hs</p>
 
 <br/>
 <br/>

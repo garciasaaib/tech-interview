@@ -1,15 +1,15 @@
 
 
 
-<p align='center'>
+<p >
         <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
 
-<h1 align='center'>spyOn</h1>
+<h1 >spyOn</h1>
 
 <div>
-<p align='center'>Implementa tu propia versión de la función spyOn que hace lo
+<p >Implementa tu propia versión de la función spyOn que hace lo
 siguiente:</p>
 
 - Toma una función como parametro

@@ -1,15 +1,15 @@
 
 
 
-<p align='center'>
+<p >
         <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
 
-<h1 align='center'>Curry</h1>
+<h1 >Curry</h1>
 <div>
-<h3 align='center'>Que es currying?</h3>
-<p align='center'>Consiste en transformar una función que utiliza múltiples argumentos en una secuencia de funciones que utilizan un único argumento.</p>
+<h3 >Que es currying?</h3>
+<p >Consiste en transformar una función que utiliza múltiples argumentos en una secuencia de funciones que utilizan un único argumento.</p>
 
 <br/>
 <br/>

@@ -48,11 +48,11 @@ const maxValue = (stocks) => {
 </code></pre>
 
 <div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div align="center">
+    <div >
         Complejidad de tiempo
             <p>???</p>
     </div>
-    <div align="center">
+    <div >
         Complejidad de espacio
             <p>???</p>
     </div>
@@ -80,11 +80,11 @@ const maxValue = (stocks) => {
 </code></pre>
 
 <div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div align="center">
+    <div >
         Complejidad de tiempo
             <p>O(n^2)</p>
     </div>
-    <div align="center">
+    <div >
         Complejidad de espacio
             <p>O(1)</p>
     </div>
@@ -114,11 +114,11 @@ const maxValue2 = (stocks) => {
 </code></pre>
 
 <div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div align="center">
+    <div >
         Complejidad de tiempo
             <p>???</p>
     </div>
-    <div align="center">
+    <div >
         Complejidad de espacio
             <p>???</p>
     </div>
@@ -148,11 +148,11 @@ const maxValue2 = (stocks) => {
 </code></pre>
 
 <div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div align="center">
+    <div >
         Complejidad de tiempo
             <p>O(n)</p>
     </div>
-    <div align="center">
+    <div >
         Complejidad de espacio
             <p>O(1)</p>
     </div>

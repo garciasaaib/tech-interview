@@ -1,17 +1,17 @@
 
 
 
-<p align='center'>
+<p >
         <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
 
-<h1 align='center'>Longest Increasing
+<h1 >Longest Increasing
 Subsequence</h1>
 
 <div>
-<p align='center'>Dado un arreglo de números, encontrá el length de la secuencia creciente mas larga posible. Esta secuencia puede saltear números en el arreglo.</p>
-<p align='center'>Por ejemplo: [3,10,4,5] la secuencia es [3,4,5] entonces devuelve 3.</p>
+<p >Dado un arreglo de números, encontrá el length de la secuencia creciente mas larga posible. Esta secuencia puede saltear números en el arreglo.</p>
+<p >Por ejemplo: [3,10,4,5] la secuencia es [3,4,5] entonces devuelve 3.</p>
 
 <br/>
 <br/>
@@ -69,10 +69,10 @@ function longestIncreasingSubsequence (nums, index = 0, base = -Infinity) {
 }
 </code></pre>
 <br/>
-<h3 align='center'> La complejidad de tiempo de esta solución es ...... </h3>
-<h2 align='center'> O(2^n) </h2>
-<h3 align='center'> Pero... siempre que tomamos el whenIncluded de un elemento ese valor es siempre el mismo... porque no lo guardamos?</h3>
-<h2 align='center'> Memoization FTW </h2>
+<h3 > La complejidad de tiempo de esta solución es ...... </h3>
+<h2 > O(2^n) </h2>
+<h3 > Pero... siempre que tomamos el whenIncluded de un elemento ese valor es siempre el mismo... porque no lo guardamos?</h3>
+<h2 > Memoization FTW </h2>
 <br/>
 <br/>
 <h1>Solución con Memoization</h1>
@@ -91,11 +91,11 @@ function memoLis (nums, index = 0, base = -Infinity, memo = {}) {
 }
 </code></pre>
 <br/>
-<h3 align='center'> Fijense que solo guardamos el whenIncluded, ya que en el excluido la base puede ser distinta y dar distintos resultados</h3>
+<h3 > Fijense que solo guardamos el whenIncluded, ya que en el excluido la base puede ser distinta y dar distintos resultados</h3>
 <br/>
 <br/>
 <br/>
-<h3 align='center'> Time complexity ahora??</h3>
-<h4 align='center'> Es dificil de ver lo acepto...</h4>
-<h2 align='center'> O(n^2) </h2>
-<h4 align='center'> Porque?? Porque por cada elemento recorremos solo una vez todos los otros elementos.</h4>
+<h3 > Time complexity ahora??</h3>
+<h4 > Es dificil de ver lo acepto...</h4>
+<h2 > O(n^2) </h2>
+<h4 > Porque?? Porque por cada elemento recorremos solo una vez todos los otros elementos.</h4>

@@ -1,33 +1,33 @@
 
 
 
-<p align='center'>
+<p >
         <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
 
-<h1 align='center'>Solve Graph</h1>
+<h1 >Solve Graph</h1>
 
 <div>
-<p align='center'>Un Graph consiste en un set de vertices conectados entre ellos por aristas.</p>
+<p >Un Graph consiste en un set de vertices conectados entre ellos por aristas.</p>
 <hr>
 <br/>
 <br/>
-<h2 align='center'>Undirected vs. Directed graphs</h2>
-<p align='center'>
+<h2 >Undirected vs. Directed graphs</h2>
+<p >
 <img  src='../../images/graph.png' </img>
 </p>
 <br/>
 <br/>
 <br/>
-<h2 align='center'>La Pregunta</h2>
-<h3 align='center' >Escribe una función que determine si un path existe entre dos vertices de un graph.</h3>
+<h2 >La Pregunta</h2>
+<h3  >Escribe una función que determine si un path existe entre dos vertices de un graph.</h3>
 <br/>
-<h3 align='center'>El graph sera representado como un objeto cada key representa un vértice y el valor todos los vertices que pueden ser alcanzados. Este sera un directed graph.</h3>
+<h3 >El graph sera representado como un objeto cada key representa un vértice y el valor todos los vertices que pueden ser alcanzados. Este sera un directed graph.</h3>
 <br/>
 <br/>
-<p align='center'>
-<img align='center' src='../../images/graph 2.png' </img>
+<p >
+<img  src='../../images/graph 2.png' </img>
 </p>
 </div>
 

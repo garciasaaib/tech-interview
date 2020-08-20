@@ -1,15 +1,15 @@
 
 
 
-<p align='center'>
+<p >
         <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
 
-<h1 align='center'>Binary To Decimal</h1>
+<h1 >Binary To Decimal</h1>
 
 <div>
-<p align='center'>Escribe una función que pase un string en
+<p >Escribe una función que pase un string en
 binario a numero Decimal</p>
 <hr>
 
@@ -18,8 +18,8 @@ binario a numero Decimal</p>
 
 - Tenemos que iterar sobre cada numero, e ir sumando la potencia de 2 y su posición multiplicada por el numero
 <br/>
-<p align='center'>
-<img align='center' src='../../images/binary-decimal.png' </img>
+<p >
+<img  src='../../images/binary-decimal.png' </img>
 </p>
 
 <br/>
