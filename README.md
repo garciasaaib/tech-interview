@@ -13,7 +13,7 @@
         <h3>Ejercicios</h3>
 
 - [01-FindNeedle](https://github.com/soyHenry/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
-- [02-SumArray](/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
+- [02-SumArray](/Entrevistas-Tecnicas/Ejercicios/01-FindNeedle/)
 - [03-FindNeedle](https://github.com/soyHenry/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
 - [04-SumArray](/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
 - [05-FindNeedle](https://github.com/soyHenry/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
