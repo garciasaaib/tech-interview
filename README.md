@@ -11,20 +11,18 @@
     </div>
     <div align='left' style= "border-right: 1px solid currentColor;">
         <h3>Ejercicios</h3>
-        <ul>
-            <li>[01-FindNeedle](Entrevistas-Tecnicas/Ejercicios/01-FindNeedle)</li>
-            <li>Aproximación</li>
-            <li>Código</li>
-            <li>Testing</li>
-            <li>Optimización</li>
-            <li>Optimización</li>
-            <li>Optimización</li>
-            <li>Optimización</li>
-            <li>Optimización</li>
-            <li>Optimización</li>
-            <li>Optimización</li>
-            <li>Optimización</li>
-        </ul>
-    </div>
+
+- [01-FindNeedle](https://github.com/soyHenry/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
+- [02-SumArray](/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
+- [03-FindNeedle](https://github.com/soyHenry/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
+- [04-SumArray](/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
+- [05-FindNeedle](https://github.com/soyHenry/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
+- [06-SumArray](/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
+- [07-FindNeedle](https://github.com/soyHenry/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
+- [08-SumArray](/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
+- [09-FindNeedle](https://github.com/soyHenry/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
+- [10-SumArray](/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
+
+      </div>
 
 </div>
