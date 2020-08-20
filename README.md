@@ -12,8 +12,8 @@
     <div align='left' style= "border-right: 1px solid currentColor;">
         <h3>Ejercicios</h3>
 
-- [01-FindNeedle](https://github.com/soyHenry/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
-- [02-SumArray](/Ejercicios/01-FindNeedle/)
+- [01-FindNeedle](/Ejercicios/01-FindNeedle/)
+- [02-SumArray](/Ejercicios/02-SumArray/)
 - [03-FindNeedle](https://github.com/soyHenry/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
 - [04-SumArray](/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
 - [05-FindNeedle](https://github.com/soyHenry/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
