@@ -14,15 +14,18 @@
 
 - [01-FindNeedle](/Ejercicios/01-FindNeedle/)
 - [02-SumArray](/Ejercicios/02-SumArray/)
-- [03-FindNeedle](https://github.com/soyHenry/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
-- [04-SumArray](/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
-- [05-FindNeedle](https://github.com/soyHenry/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
-- [06-SumArray](/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
-- [07-FindNeedle](https://github.com/soyHenry/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
-- [08-SumArray](/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
-- [09-FindNeedle](https://github.com/soyHenry/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
-- [10-SumArray](/Entrevistas-Tecnicas/tree/master/Ejercicios/01-FindNeedle/)
-
-      </div>
-
+- [03-MaxValue](/Ejercicios/03-MaxValue/)
+- [04-MultidimensionalSumArray](/Ejercicios/04-MultidimenasionalSumArray/)
+- [05-MinStack](Ejercicios/05-MinStack/)
+- [06-HasBalanceBrackets](/Ejercicios/06-HasBalanceBrackets/)
+- [07-SolveGraph](/Ejercicios/07-SolveGraph/)
+- [08-FindWordStartingWith](/Ejercicios/08-FindWordStartingWith/)
+- [09-BinaryToDecimal](Ejercicios/09-BinaryToDecimal/)
+- [10-DecimalToBinary](/Ejercicios/10-DecimalToBinary/)
+- [11-ClockMinuteAdder](/Ejercicios/11-ClockMinuteAdder/)
+- [12-Intersection](/Ejercicios/12-Intersection/)
+- [13-SubSetSum](/Ejercicios/13-SubSetSum/)
+- [14-LongestIncreasingSubSequence](Ejercicios/14-LongestIncreasingSubSequence/)
+- [15-SpyOn](Ejercicios/15-SpyOn/)
+- [16-Curry](Ejercicios/16-Curry/)
 </div>
