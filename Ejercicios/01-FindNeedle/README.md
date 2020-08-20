@@ -1,27 +1,27 @@
 
 
 
-<p align='center'>
+<p >
         <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
 
-<h1 align='center'>Find Needle</h1>
+<h1 >Find Needle</h1>
 
 <div>
-<p align='center'>Encontrar el indice de la primera apariciónde un string (needle) dentro de otro(haystack)</p>
+<p >Encontrar el indice de la primera apariciónde un string (needle) dentro de otro(haystack)</p>
 <hr>
 
 
-<h4 align='center'>
+<h4 >
 needle: redux haystack: react-redux output: 5 
 </h4>
-<h4 align='center'>
+<h4 >
 needle: puntualhaystack: pinkyoutput: -1
 </h4>
 </div>
 
-<h3 align='center'>no se puede usar indexOf()</h3>
+<h3 >no se puede usar indexOf()</h3>
 <br/>
 <br/>
 <br/>
