@@ -12,7 +12,7 @@
 <h2>Stack</h2>
 <p align='center'>Un Stack o Pila es LIFO (Last-in First-out)osea el ultimo que entro es el primero ensalir</p>
 <br/>
-<p align='center'>Necesitas implementar un stack que tengalos siguientes metodos:</p>
+<p>Necesitas implementar un stack que tengalos siguientes metodos:</p>
 
 - push(value) // para añadir elementos
 - pop() // para sacar un elemento
@@ -103,6 +103,6 @@ class MinStack extends Stack{
 <br/>
 <br/>
 <br/>
-<p align='center'>Sigue siendo O(n), pero ahora estamosguardando el doble de información (2n)</p>
+<p align='center'>Sigue siendo O(n), pero ahora estamos guardando el doble de información (2n)</p>
    
 </div>
