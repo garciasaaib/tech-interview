@@ -1,15 +1,17 @@
 
 
 
-<p >
-        <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
+<p>
+        <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp'</img>
 </p>
 
 
-<h1 >Find Needle</h1>
+<h1>Find Needle</h1>
 
 <div>
-<p >Encontrar el indice de la primera apariciónde un string (needle) dentro de otro(haystack)</p>
+<p>¿Cuantas veces hemos escuchado lo complejo que puede ser encontrar una aguja en un pajar? Pero como todo, tiene solucion. 
+En este caso, nos planteamos una pequeña analogia: "<b>Encontrar el indice de la primera apariciónde un string (needle) dentro de otro (haystack)</b>"
+
 <hr>
 
 
