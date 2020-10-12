@@ -6,105 +6,46 @@
 </p>
 
 
-<h1>Find Needle</h1>
+# Find Needle
+## Introducción
+¿Cuántas veces hemos escuchado lo complejo que puede ser encontrar una aguja en un pajar? Miles, pero como todo, tiene solución.   
+En este caso, nos planteamos una pequeña analogía: "<b>Encontrar el indice de la primera aparición de un string (needle) dentro de otro (haystack)</b>."    
+Es decir, el objetivo del ejercicio es determinar si el primer string, needle, esta dentro del segundo, haystack, y en dicho caso, devolver el indice en el que esto ocurre.    
 
-<div>
-<p>¿Cuantas veces hemos escuchado lo complejo que puede ser encontrar una aguja en un pajar? Pero como todo, tiene solucion. 
-En este caso, nos planteamos una pequeña analogia: "<b>Encontrar el indice de la primera apariciónde un string (needle) dentro de otro (haystack)</b>"
+#### Ejemplos
+###### Lo encuentra
+**needle**: redux       
+**haystack**: react-redux        
+**output**: 5          
 
-<hr>
+###### No lo encuentra
+**needle**: puntual           
+**haystack**: pinky          
+**output**: -1             
+
+En este caso, como el needle no se encuentra en el haystack el valor de salida es -1.
 
 
-<h4 >
-needle: redux haystack: react-redux output: 5 
-</h4>
-<h4 >
-needle: puntualhaystack: pinkyoutput: -1
-</h4>
-</div>
+## Solución
+### En palabras
+Como siempre, antes de pensar en el código, debemos poder explicar o resolver el problema en palabras.         
+Aquí, un leve paso a paso de cómo podríamos resolver el ejercicio.                
 
-<h3 >no se puede usar indexOf()</h3>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<h1> Solucion Humana</h1>
+1. Visitar cada caracter del haystack
+2. Visitar cada caracter del needle, si el primer caracter coincide:  
+    1. Comparar el segundo caracter del needle con el siguiente del haystack
+    2. Continuar hasta llegar al final del needle o hasta que una comparación no sea igual
+        1. Si llegamos al final del needle es que encontramos el indice
+3. Si el primer caracter del needle no coincide, avanzo al próximo caracter
+4. Llegamos al final del haystack y no encontramos ninguna coincidencia     
 
-- Visitar cada caracter del haystack
-- Si empieza con el primer
-    - Comparar el segundo caracter del needle con elsiguiente del haystack
-    - continuar hasta llegar al final del needle o hastaque una comparación no sea igual
-        - Si llegamos al final del needle es qencontramos el indice
-- Si no empieza con el mismo caracter q la needleseguir al proximo caracter
-- Si llegamos al final del haystack no encontramos elmatch
+#### IMPORTANTE
+Para la resolución de este ejercicio no se puede utilizar la función preexistente: <b>indexOf( )</b>
 
-<br/>
-<pre><code>
-const findNeedle = (haystack, needle) => {
-    // iteramos sobre el haystackfor 
-    (let haystackIndex = 0; haystackIndex < haystack.length; haystackIndex += 1) {
-        // comenzamos a iterar sobre el needle
-        for (let needleIndex = 0; needleIndex < needle.length; needleIndex += 1 ) {
-            // comparamos la letra del needle en la que estamos con la letra del haystack
-            // cuando no hay match cortamos de comparar el needle
-            if (haystack[haystackIndex + needleIndex] !== needle[needleIndex]) break;
-            // si terminamos de recorrer la needle devolvemos el haystackIndex
-            if (needleIndex + 1 === needle.length) return haystackIndex;
-        } 
-    }
-                 // una vez que termina el loop devolvemos -1
-                 return-1;
-}
-</code></pre>
-
-<div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div >
-        Complejidad de tiempo
-            <p>???</p>
-    </div>
-    <div >
-        Complejidad de espacio
-            <p>???</p>
-    </div>
-</div>
-<hr>
-<br/>
-<h2>Solucion</h2>
-<pre><code>
-const findNeedle = (haystack, needle) => {
-    // iteramos sobre el haystack
-    for (let haystackIndex = 0; haystackIndex < haystack.length; haystackIndex += 1) {
-        // comenzamos a iterar sobre el needle
-        for (let needleIndex = 0; needleIndex < needle.length; needleIndex += 1 ) {
-            // comparamos la letra del needle en la que estamos con la letra del haystack
-            // cuando no hay match cortamos de comparar el needle
-            if (haystack[haystackIndex + needleIndex] !== needle[needleIndex]) break;
-            // si terminamos de recorrer la needle devolvemos el haystackIndex
-            if (needleIndex + 1 === needle.length) return haystackIndex;
-        }  
-    }
-    // una vez que termina el loop devolvemos -1
-    return-1;
-}
-</code></pre>
-
-<div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div >
-        Complejidad de tiempo
-            <p>O(n*m)</p>
-    </div>
-    <div >
-        Complejidad de espacio
-            <p>0(1)</p>
-    </div>
-</div>
-
-<hr>
-<br/>
-<h2>Solucion</h2>
-<pre><code>
+### Primer Alternativa
+Ahora si, busquemos la forma de traducir lo que ya dijimos en palabras a código.<br/>
+Ademas, debemos evaluar la complejidad en tiempo y espacio.
+```javascript
 const findNeedle = (haystack, needle) => {
     // iteramos sobre el haystack
     for (let haystackIndex = 0; haystackIndex < haystack.length; haystackIndex += 1) {
@@ -117,77 +58,36 @@ const findNeedle = (haystack, needle) => {
             if (needleIndex + 1 === needle.length) return haystackIndex;
         }
     }
-    // una vez que termina el loop devolvemos -1
-    return-1;
+                 // una vez que termina el loop y no encontramos match devolvemos -1
+                 return -1;
 }
-</code></pre>
+```
+Considerando **haystack.length = n** y **needle.length = m**
 
-<div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div >
-        Complejidad de tiempo
-            <p>O(n*m)</p>
-    </div>
-    <div >
-        Complejidad de espacio
-            <p>0(1)</p>
-    </div>
-</div>
+Complejidad temporal | Complejidad espacial
+--|--
+O(n*m)|O(1)
 
-<hr>
-<br/>
-<h2>Solucion Alternativa</h2>
-<pre><code>
+### Segunda Alternativa
+Otra forma de resolver el ejercicio, es utilizando la función slice. ¿Qué hacemos? Nos fijamos si el substring subsiguiente en el haystack coincide o no con el needle. Si coincide, ya encontramos el indice que estábamos buscando, sino, avanzamos al próximo caracter en el haystack para poder seguir buscando.  
+```javascript
 function findNeedle2(haystack, needle){
-    // iterar sobre el haystack
-    for (let i = 0; i < haystack.length; i += 1) {
-        // si la substring matchea el neddle podemos devoler el valor de i
-        if (haystack.slice(i, i + needle.length) === needle) {
-            return i;      
-        }  
-    }
-    return-1;
+  // iterar sobre el haystack
+  for (let i = 0; i < haystack.length; i += 1) {
+      // si la substring matchea el neddle podemos devoler el valor de i
+      if (haystack.slice(i, i + needle.length) === needle) {
+          return i;
+      }
+  }
+  return -1;
 }
-</code></pre>
+```
+Considerando **haystack.length = n** y **needle.length = m**
 
-<div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div >
-        Complejidad de tiempo
-            <p>???</p>
-    </div>
-    <div >
-        Complejidad de espacio
-            <p>???</p>
-    </div>
-</div>
-
-<hr>
-<br/>
-<h2>Solucion Alternativa</h2>
-<pre><code>
-function findNeedle2(haystack, needle){
-    // iterar sobre el haystack
-    for (let i = 0; i < haystack.length; i += 1) {
-        // si la substring matchea el neddle podemos devoler el valor de i
-        if (haystack.slice(i, i + needle.length) === needle) {
-            return i;
-        }
-    }
-    return-1;
-}
-</code></pre>
-
-<div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div >
-        Complejidad de tiempo
-            <p>???</p>
-    </div>
-    <div >
-        Complejidad de espacio
-            <p>???</p>
-    </div>
-</div>
-<hr>
-<h4>Soluciones en</h4>
-<a style="font-size:20px" href="https://repl.it/Jc2b/0">repl.it</a>
+Complejidad temporal | Complejidad espacial
+--|--
+O(n*m)|O(1)
 
 
+## Código
+Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/Jc2b/0).

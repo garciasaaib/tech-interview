@@ -1,4 +1,4 @@
-
+Está
 
 
 <p >
@@ -6,149 +6,83 @@
 </p>
 
 
-<h1 >Sum Array</h1>
+# Sum Array
+## Introducción
+En este caso se nos presentan dos elementos: una arreglo **ordenado** de números enteros  y un número entero.    
+El objetivo del ejercicio es encontrar si la combinación de dos números cualesquiera del arreglo, suman el número dado.
 
-<div>
-<p >Dado un arreglo de números ordenados yun integro, ver si dos números suman alsegundo</p>
-<hr>
+#### Ejemplos
+###### Existen dos valores
+**arreglo**: [2,4,5,9]     
+**número**: 9        
+**return**: true
 
+###### No existen dos valores
+**arreglo**: [2,4,5,9]     
+**número**: 12        
+**return**: false
 
-<h4 >
-arreglo: [2,4,5,9] / numero: 9  / return: true 
-</h4>
-<h4 >
-arreglo: [2,4,5,9] / numero:12 / return: false
-</h4>
-</div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<h1> Solución Naive </h1>
-<br/>
-<pre><code>
+## Solución
+Como todo ejercicio, existen múltiples soluciones para un mismo problema.
+En este caso, analizáremos dos alternativas diferentes, luego determináremos cual es mejor.
+
+### En palabras
+1. Recorrer el arreglo con dos indices
+2. Chequear si la suma de ambas posiciones da el valor pasado por parámetro
+  1. Si da, hemos terminado. Encontramos los valores buscados
+  2. Si no, seguimos avanzando
+3. Si uno de los indices llego al final, hemos finalizado el recorrido y no existen dos valores en el arreglo que logren la suma esperada
+
+### Primer Alternativa
+```javascript
 functionsumArray (arr, n) {
-    // itero sobre el arreglo
+    // Itero sobre el arreglo
     for (let i = 0; i < arr.length - 1; i += 1) {
-        // itero sobre los numeros siguientes
+        // Itero sobre los números siguientes
         for (let j = i + 1; j < arr.length; j += 1) {
-            // veo si son iguales a la suma y devuelvo true
-            if (arr[i] + arr[j] === n) returntrue;
+            // Veo si son iguales a la suma y devuelvo true
+            if (arr[i] + arr[j] === n) return true;
         }  
     }
-    // si termine de recorrer el arreglo devuelvo alse
-    returnfalse;
+    // Si termine de recorrer el arreglo devuelvo alse
+    return false;
 }
-</code></pre>
+```
 
-<div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div >
-        Complejidad de tiempo
-            <p>???</p>
-    </div>
-    <div >
-        Complejidad de espacio
-            <p>???</p>
-    </div>
-</div>
-<hr>
-<br/>
-<h2>Solucion Naive</h2>
-<pre><code>
-functionsumArray (arr, n) {
-    // itero sobre el arreglo
-    for (let i = 0; i < arr.length - 1; i += 1) {
-        // itero sobre los numeros siguientes
-        for (let j = i + 1; j < arr.length; j += 1) {
-            // veo si son iguales a la suma y devuelvo true
-            if (arr[i] + arr[j] === n) returntrue;
-        }
-    }
-    // si termine de recorrer el arreglo devuelvo false
-    returnfalse;
-}    
-</code></pre>
+Complejidad Temporal | Complejidad Espacial
+--|--
+O(n^2)|O(1)
 
-<div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div >
-        Complejidad de tiempo
-            <p>O(n^2)</p>
-    </div>
-    <div >
-        Complejidad de espacio
-            <p>0(1)</p>
-    </div>
-</div>
-
-<hr>
-<br/>
-<h2>Mejor Solución</h2>
-<pre><code>
+### Segunda Alternativa
+```javascript
 function sumArray2 (arr, n) {
-    // creo un puntero para el principio y el final
+    // Creo un puntero para el principio y el final
     let start = 0;
     let end = arr.length - 1;
-    // mientras el puntero del principio sea menor al del final
+    // Mientras el puntero del principio sea menor al del final
     while (start < end) {
         // guardo el resultado de la suma
         const sum = arr[start] + arr[end];
         // Si son iguales devuelvo true
         if ( sum === n) return true;
-        // Si es menor aumento el puntero de start 
+        // Si es menor aumento el puntero de start
         else if (sum < n) start += 1;
-        // si es mayor decremento el puntero de end
+        // Si es mayor decremento el puntero de end
         else end -= 1;  
         }
-        // si salimos del for loop significa q no hay coincidencia
+        // Si salimos del for loop significa que no hay coincidencia
         return false;
 }
-</code></pre>
+```
 
-<div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div >
-        Complejidad de tiempo
-            <p>???</p>
-    </div>
-    <div >
-        Complejidad de espacio
-            <p>???</p>
-    </div>
-</div>
+Complejidad Temporal | Complejidad Espacial
+--|--
+O(n)|O(1)
 
-<hr>
-<br/>
-<h2>Mejor Solución</h2>
-<pre><code>
-function sumArray2 (arr, n) {
-    // creo un puntero para el principio y el final
-    let start = 0;
-    let end = arr.length - 1;
-    // mientras el puntero del principio sea menor al del final
-    while (start < end) {
-        // guardo el resultado de la suma
-        const sum = arr[start] + arr[end];
-        // Si son iguales devuelvo true
-        if ( sum === n) returntrue;
-        // Si es menor aumento el puntero de start 
-        else if (sum < n) start += 1;
-        // si es mayor decremento el puntero de end
-        else end -= 1;  
-    }
-        // si salimos del for loop significa q no hay coincidencia
-        returnfalse;
-}
-</code></pre>
+#### ¿Qué solución es mejor?
+En primer lugar lo que podemos hacer es analizar complejidades, tanto temporales como espaciales. Al ver ambas soluciones vemos que la complejidad espacial es mantiene, pero no así, la complejidad temporal.       
+En el primer caso, la complejidad temporal es de orden n^2. ¿Por qué? Porque estamos recorriendo el mismo arreglo dos veces, mientras que en la segunda solución utilizamos dos indices para recorrer el mismo arreglo, una unica vez.
+Partiendo de esta base, ya sabemos que **la segunda solución es mejor** que la primera.
 
-<div style="display:grid ;justify-content: space-evenly; grid-template-columns: 400px 400px ;">
-    <div >
-        Complejidad de tiempo
-            <p>O(n)</p>
-    </div>
-    <div >
-        Complejidad de espacio
-            <p>O(1)</p>
-    </div>
-</div>
-
+## Código
+Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/Jh9N/0).

@@ -5,11 +5,10 @@
         <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
-
-<h1 >Max Value</h1>
+# Max Value
 
 <div>
-<p >Dado un arreglo de valores de acciones, encontrar lamayor ganancia posible de comprar a un horario yvender despues</p>
+<p >Dado un arreglo de valores de acciones, encontrar la mayor ganancia posible de comprar a un horario y vender después</p>
 <hr>
 
 
