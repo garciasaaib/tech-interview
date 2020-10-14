@@ -1,54 +1,47 @@
 
 
-
-<p >
+<p>
         <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
 
-<h1 >Has Balance Brackets</h1>
+# Has Balance Brackets
+## Introducción
+Crear un bracket validator. La idea es que chequee que los brackets estén balanceados correctamente.    
 
-<div>
-<p >Crear un bracket validator, que chequee que estén balanceados correctamente. Los brackets validos son los siguientes:</p>
-<hr>
+Los brackets válidos son los siguientes:  **[ ] ( ) { }**
 
+### Ejemplos
 
-<h4 >
-{ [ ] ( ) }" debería devolver true
-</h4>
-<h4 >
-{ [ ( ] ) }" debería devolver false
-</h4>
-<h4 >
-{ [ }" debería devolver false
-</h4>
-<h4 >
-{ [ ( [ { ( )[ ]{ } } ] ) ] }" debería devolver true
-</h4>
-</div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<h1>Approach</h1>
+**input:** "{ [ ] ( ) }"    
+**output:** true
 
-- Tienes "opening"- ( { [ - y "closing" - ) } ] -brackets
-- Cada closing bracket tiene que corresponder con la opening bracket mas cercana que empareje
-- Cada opening y closing bracket tieneque estar en pareja.
-<br/>
-<br/>
+**input:** "{ [ ( ] ) }"   
+**output:** false
 
-<p align="center">Entonces tenemos que ir trackeando las opening brackets y fijarse si cuandoencontramos una closing bracket, matcheacon la opening bracket mas cercana
-</p>
-<p align="center">Que  estructura de datos podemos utilizarpara esto?</p>
-<br/>
-<br/>
-<h1>Solución Posible</h1>
-<br/>
-<pre><code>
+**input:** "{ [ }"   
+**output:** false
+
+**input:** "{ [ ( [ { ( )[ ]{ } } ] ) ] }"   
+**output:** true
+
+## Solución
+### En Palabras
+
+1. Tienes:
+  *  **"opening"** - **( { [** - y,
+  * **"closing"** - **) } ]** - brackets.
+2. Cada closing bracket tiene que corresponder con la opening bracket mas cercano que empareje.
+3. Cada opening y closing bracket tienen que estar en pareja.
+
+Entonces tienen que ir trackeando los opening brackets y fijarse si cuando encontramos una closing bracket, matchea con la opening bracket mas cercana
+
+##### ¿Qué  estructura de datos podemos utilizar para esto?
+
+### Solución posible
+```javascript
 const hasBalancedBrackets = (string) => {
-    //  Tenemos un diccionario para chequear las opening brackets con sus closing brackets 
+    //  Tenemos un diccionario para chequear las opening brackets con sus closing brackets
     const validBrackets = {
         '{' : '}',
         '[' : ']',
@@ -60,20 +53,20 @@ const hasBalancedBrackets = (string) => {
     for (let i = 0; i < string.length; i += 1) {
         // si existe la propiedad significa q es un opening bracket entonces lo guardamos
         if (validBrackets[string[i]]) openBrackets.push(string[i]);
-        // Si no nos fijamos q el closing bracket corresponda con el ultimo opening bracketelse
-        if (validBrackets[openBrackets.pop()] !== string[i] ) returnfalse;
+        // Si no nos fijamos q el closing bracket corresponda con el ultimo opening bracket else
+        if (validBrackets[openBrackets.pop()] !== string[i] ) return false;
         // sino seguimos (esta linea es 100% innecesaria pero linda de leer)
-        elsecontinue; 
+        else continue;
     }
-    // una vez que terminamos de recorrer 
+    // una vez que terminamos de recorrer
     // chequeamos que no haya quedado nada en el arreglo
     return !openBrackets.length;
 };
+```
 
-</code></pre>
-<br/>
-<br/>
-<h1>Conclusión</h1>
+## Conclusión
+* Las estructuras de datos pueden ser muy útiles aunque... no estemos explícitamente creando una.
+* Podemos usar arreglos y métodos del arreglo para crear un arreglo que se comporte como un stack/queue
 
-- Las estructuras de datos pueden ser muy utilies aunque no estemos creando explicitamente una.
-- Podemos usar arreglos y metodos del arreglo para crear un arreglo q se comporte como un stack/queue
+## Código
+Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/JsIz).

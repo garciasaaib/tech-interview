@@ -1,64 +1,52 @@
 
 
-
-<p >
+<p>
         <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
 
-<h1 >Solve Graph</h1>
+# Solve Graph
+## Introducción
+Un grafo/graph es un set de vertices conectados entre ellos por aristas.
 
-<div>
-<p >Un Graph consiste en un set de vertices conectados entre ellos por aristas.</p>
-<hr>
-<br/>
-<br/>
-<h2 >Undirected vs. Directed graphs</h2>
-<p >
-<img  src='../../images/graph.png' </img>
+### Undirected vs. Directed Graphs
+<p>
+<img src='../../images/graph.png' </img>
 </p>
-<br/>
-<br/>
-<br/>
-<h2 >La Pregunta</h2>
-<h3  >Escribe una función que determine si un path existe entre dos vertices de un graph.</h3>
-<br/>
-<h3 >El graph sera representado como un objeto cada key representa un vértice y el valor todos los vertices que pueden ser alcanzados. Este sera un directed graph.</h3>
-<br/>
-<br/>
-<p >
-<img  src='../../images/graph 2.png' </img>
-</p>
-</div>
 
-<br/>
-<br/>
-<h1>Approach</h1>
+### ¿Qué hay que hacer?
+Escribe una función que determine si existe un path entre dos vertices de un graph.   
 
-- La solución puede ser un algoritmo Breadth-First o Depth-First
-- Pero los graphs pueden ser cíclicos
-- Si no empieza con el mismo caracter q la needleseguir al proximo caracter
-- Si empezamos recorriendo el vertice A, eventualmente vamos a llegar al vertice R que apunta devuelta al A.
+El graph será representado como un objeto. Cada key representa un vértice. El valor, todos los vertices que pueden ser alcanzados.
 
-<br/>
-<pre><code>
-{ 
+El graph, será un *'directed graph'*.
+
+<p><img src='../../images/graph 2.png'</img></p>
+
+Como observamos, en la imagen de la izquierda el nodo 'a' se conecta con el nodo 'b', el nodo 'b' con el nodo 'c' y 'd' y por último, el nodo 'c' con el nodo 'd'.
+
+## Solución
+### En palabras
+- La solución puede ser un algoritmo **Breadth-First** o **Depth-First**
+- Pero... los graphs pueden ser cíclicos
+  -  Si empezamos recorriendo el vértice A, eventualmente vamos a llegar al vértice R que apunta devuelta al A.
+
+```javascript
+{
     a: ['c'],
     c: ['s', 'r'],
     r: ['a'],
-    s: []
+    s: [ ]
 }
-</code></pre>
+```
+- ¿El problema? Un algoritmo normal de BFS/DFS terminaría en un **loop infinito**.
+- Por lo tanto, tu algoritmo tiene que traquear todos los vertices que visitó
+- Si un vértice ha sido visitado sabemos que no tenemos que recorrer sus aristas por segunda vez
+- El **algoritmo se completa** cuando se ha encontrado el target o cuando todas las posibilidades fueron recorridas.
 
-- El problema? Un algoritmo normal de BFS/DFS terminaria en un loop infinito.
-- Por lo tanto tu algoritmo tiene que trackear todos los vertices que visito
-- Si un vertice a sido visitado sabemos que no tenemos q ecorrer sus aristas por segunda vez
-- El algoritmo se completa cuando ha encontrado el target o cuando todas las posiblidades fueron recorridas.
-<br/>
-<hr>
-<br/>
-<h2>Solución depth-first approach</h2>
-<pre><code>
+### Solución depth-first
+
+```javascript
 const graph = {
 a: ['c'],
 b: ['c'],
@@ -69,28 +57,32 @@ r: ['d'],
 z: ['z']
 };
 function solveGraphDFS(graph, start, end, visited = {}) {
-    // nos fijamos si ya visitamos este vertice
+    // nos fijamos si ya visitamos este vértice
     if (visited[start]) return false;
     // lo agregamos a los visitados
     visited[start] = true;
-    // iteramos sobre el arreglo de vertices
+    // iteramos sobre el arreglo de vértices
     for (let i = 0; i < graph[start].length; i += 1) {
         // Si encontramos el target devolvemos true
         if (end === graph[start][i]) return true;
-        // si no llamamos recursivamente a la función para ver si sus aristas estan conectadas
+        // si no llamamos recursivamente a la función para ver si sus aristas están conectadas
         else if (solveGraphDFS(graph, graph[start][i], end, visited)) return true
 }
 // si no devolvemos false
 return false;
 }
+
 solveGraphDFS(graph, 'a', 'r') // true
 solveGraphDFS(graph, 's', 'b') // false
-</code></pre>
-<br/>
-<br/>
-<br/>
-<h2>Solución breadth-first approach</h2>
-<pre><code>
+```
+
+Complejidad Temporal | Complejidad Espacial
+--|--
+O(n)|O(n)
+
+
+### Solución breadth-first approach
+```javascript
 const graph = {
 a: ['c'],
 b: ['c'],
@@ -101,25 +93,25 @@ r: ['d'],
 z: ['z']
 };
 function solveGraphBFS(graph, start, end, visited = {}, queue = []) {
-    // nos fijamos si ya visitamos este vertice
+    // nos fijamos si ya visitamos este vértice
     if (visited[start]) return false;
     // lo agregamos a los visitados
     visited[start] = true;
-    // iteramos sobre el arreglo de vertices
+    // iteramos sobre el arreglo de vértices
     for (let i = 0; i < graph[start].length; i += 1) {
     // agregamos todas sus conexiones al queue
     queue.push(graph[start][i]);
 }
 // comparamos si el siguiente del queue es nuestro target
-// sino llamamos recursivamente a la funcion con el start del siguiente del queue
+// sino llamamos recursivamente a la función con el start del siguiente del queue
 return queue[0] === end || solveGraphBFS(graph, queue.shift(), end, visited, queue);
 }
 solveGraphBFS(graph, 'a', 'r'); // true
 solveGraphBFS(graph, 's', 'b'); // false
-</code></pre>
-<br/>
-<br/>
- <div align="center">
-        Complejidad de tiempo
-            <p>O(n)</p>
-    </div>
+```
+Complejidad Temporal | Complejidad Espacial
+--|--
+O(n)|O(n)
+
+## Código
+Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/JuS9).

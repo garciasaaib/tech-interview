@@ -1,37 +1,37 @@
 
 
-
-<p >
+<p>
         <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
+# Min Stack
+## Introducción
+Para poder comprender el objetivo de esta actividad necesitamos saber **¿Qué es un stack?** Un stack, también conocido como pila es **LIFO** (Last-In First-Out), es decir, el último en entrar es el primero en salir.       
 
-<h1 >Min Stack</h1>
+En este caso, el ejercicio es implementar un stack que tenga los siguientes métodos:
+1. **push(value) :** añadir el elemento, value, al stack.
+2. **pop ( ) :** sacar un elemento del stack.
+3. **min ( ) :** obtener el elemento con el valor mínimo.
 
-<div>
-<h2>Stack</h2>
-<p >Un Stack o Pila es LIFO (Last-in First-out)osea el ultimo que entro es el primero ensalir</p>
-<br/>
-<p>Necesitas implementar un stack que tengalos siguientes metodos:</p>
+#### Importante
+* **TODOS** los métodos mencionados anteriormente deben ser de O(1).
+* Para la resolución del ejercicio no se puede utilizar **ningún** *Array method*
 
-- push(value) // para añadir elementos
-- pop() // para sacar un elemento
-- min() // ver el elemento con el valor mínimo
-<br/>
-<h3 >Todas estas funciones tienen que correren O(1)</h3>
-<h3 >No se puede usar ningun Array method</h3>
-<br/>
-<h2>Approach</h2>
+## Solución
+### En palabras
 
-- implementar un stack normal. Luego implementar un stack con requisito mas - encontrar el minimo
-- NO PUEDES guardar el valor minimo y cada vez que agregas un valor nuevo compararlo
-    - PORQUE?
+1. Implementar un stack normal
+2. Luego, implementar un stack con un requisito mas > encontrar el mínimo
 
-<p>IDEA: Tener una estructura separada para guardar el mínimo por cada nodo que seagrega, y cuando sacamos el nodoremovemos ese minimo</p>
-<br/>
-<br/>
-<h1>Solución: Primero hacemos un stack común</h1>
-<pre><code>
+##### Importante
+**NO PUEDES** guardar el valor mínimo y cada vez que agregas un nuevo valor compararlo **¿POR QUÉ?**
+
+**( ! ) IDEA:** Tener una estructura separada para guardar el mínimo por cada nodo que se agrega, y cuando sacamos el nodo removemos ese mínimo
+
+### Primer aproximación
+Una primer aproximación para la resolución de este ejercicio es realizar un stack común.
+
+```javascript
 class Node{
     constructor(value) {
         this.value = value;
@@ -55,15 +55,15 @@ classStack{
             return oldTop && oldTop.value;  
             }  
         peek() {
-            returnthis.top && this.top.value  
+            return this.top && this.top.value  
         }
 }
-</code></pre>
+```
 
-<hr>
-<br/>
-<h1>Solución: Extendemos el Stack para agregarle el minimo</h1>
-<pre><code>
+### Extendemos el stack
+Luego, mejoramos la resolución previamente presentada. Extendemos el stack para agregarle el mínimo
+
+```javascript
 class MinStack extends Stack{
     constructor() {
         super();
@@ -88,21 +88,13 @@ class MinStack extends Stack{
         this.minimum.pop();return oldTop && oldTop.value;  
     }  
     min() {
-        returnthis.minimum.peek();  
+        return this.minimum.peek();  
     }
 }
+```
 
-</code></pre>
+## Complejidad Espacial
+La complejidad espacial del ejercicio sigue siendo de O(n) con la diferencia que ahora almacenamos el doble de la información, O(2n)
 
-<div>
-   
-<p >Space Complexity deMinStack?MinStack?</p>
-<p >???</p>
-    
-<br/>
-<br/>
-<br/>
-<br/>
-<p >Sigue siendo O(n), pero ahora estamos guardando el doble de información (2n)</p>
-   
-</div>
+## Código
+Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/JqWw).

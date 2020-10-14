@@ -33,7 +33,7 @@ En este caso, analizáremos dos alternativas diferentes, luego determináremos c
   2. Si no, seguimos avanzando
 3. Si uno de los indices llego al final, hemos finalizado el recorrido y no existen dos valores en el arreglo que logren la suma esperada
 
-### Primer Alternativa
+### Primer alternativa
 ```javascript
 functionsumArray (arr, n) {
     // Itero sobre el arreglo
@@ -53,7 +53,7 @@ Complejidad Temporal | Complejidad Espacial
 --|--
 O(n^2)|O(1)
 
-### Segunda Alternativa
+### Segunda alternativa
 ```javascript
 function sumArray2 (arr, n) {
     // Creo un puntero para el principio y el final
