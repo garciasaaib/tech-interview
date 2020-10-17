@@ -24,8 +24,8 @@ En este caso, el ejercicio es implementar un stack que tenga los siguientes mét
 2. Luego, implementar un stack con un requisito mas > encontrar el mínimo
 
 ##### Importante
-**NO PUEDES** guardar el valor mínimo y cada vez que agregas un nuevo valor compararlo **¿POR QUÉ?**
 
+**NO PUEDES** guardar el valor mínimo y cada vez que agregas un nuevo valor compararlo **¿POR QUÉ?**
 **( ! ) IDEA:** Tener una estructura separada para guardar el mínimo por cada nodo que se agrega, y cuando sacamos el nodo removemos ese mínimo
 
 ### Primer aproximación

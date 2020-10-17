@@ -8,8 +8,8 @@
 
 # Find Needle
 ## Introducción
-¿Cuántas veces hemos escuchado lo complejo que puede ser encontrar una aguja en un pajar? Miles, pero como todo, tiene solución.   
-En este caso, nos planteamos una pequeña analogía: "<b>Encontrar el indice de la primera aparición de un string (needle) dentro de otro (haystack)</b>."    
+Encontrar el indice de la primera aparición de un string (needle) dentro de otro (haystack).
+
 Es decir, el objetivo del ejercicio es determinar si el primer string, needle, esta dentro del segundo, haystack, y en dicho caso, devolver el indice en el que esto ocurre.    
 
 #### Ejemplos
@@ -28,9 +28,6 @@ En este caso, como el needle no se encuentra en el haystack el valor de salida e
 
 ## Solución
 ### En palabras
-Como siempre, antes de pensar en el código, debemos poder explicar o resolver el problema en palabras.         
-Aquí, un leve paso a paso de cómo podríamos resolver el ejercicio.                
-
 1. Visitar cada caracter del haystack
 2. Visitar cada caracter del needle, si el primer caracter coincide:  
     1. Comparar el segundo caracter del needle con el siguiente del haystack
@@ -69,7 +66,8 @@ Complejidad temporal | Complejidad espacial
 O(n*m)|O(1)
 
 ### Segunda Alternativa
-Otra forma de resolver el ejercicio, es utilizando la función slice. ¿Qué hacemos? Nos fijamos si el substring subsiguiente en el haystack coincide o no con el needle. Si coincide, ya encontramos el indice que estábamos buscando, sino, avanzamos al próximo caracter en el haystack para poder seguir buscando.  
+Otra forma de resolver el ejercicio, es utilizando la función slice.
+
 ```javascript
 function findNeedle2(haystack, needle){
   // iterar sobre el haystack

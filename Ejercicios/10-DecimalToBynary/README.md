@@ -1,30 +1,24 @@
 
 
-
-<p >
+<p>
         <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
 
-<h1 >Decimal To Bynary</h1>
+# Decimal to Binary
+## Introducción
+En el caso anterior transformábamos números binarios en decimales. En este caso hay que **hacer una función que tome un numero decimal y lo devuelva en binario**
 
-<div>
-<p >Hacé una función que tome un número decimal y lo devuelva en binario</p>
+## Solución
+### En palabras
+1. Tomá el número y sacá su modulo en 2
+2. Guardá el resultado en un string
+3. Dividí el número por 2 y redondealo para abajo
+4. Continúa el proceso hasta que el número sea igual a 0
+5. Devuelve el string
 
-<br/>
-<br/>
-<h1>Approach</h1>
-
-- Toma el numero y saca su modulo en 2
-- Guarda el resultado en un string
-- Divide el numero por dos y redondealo para abajo
-- Continua el proceso hasta que el numero sea cero
-- Devuelve el string
-
-<br/>
-<br/>
-<h1> Solución </h1>
-<pre><code>
+### Primer alternativa
+```javascript
 const decimalToBinary = (num) => {
     let binary = '';
     while(num) {
@@ -33,15 +27,16 @@ const decimalToBinary = (num) => {
     }
     return binary
 }
-</code></pre>
-<br/>
-<br/>
-<h1> Solución Recursiva </h1>
-<pre><code>
+```
+### Segunda alternativa
+En este caso, se propone una **solución recursiva**.
+```javascript
 const decimalToBinaryRec = (num) => {
     if (num) {
         return decimalToBinaryRec(Math.floor(num / 2)) + num % 2
     }
     return '';
 }
-</code></pre>
+```
+## Código
+Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/KDLz/1).

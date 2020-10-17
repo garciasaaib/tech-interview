@@ -1,29 +1,25 @@
 
 
 
-<p >
+<p>
         <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
 
-<h1 >spyOn</h1>
-
-<div>
-<p >Implementa tu propia versión de la función spyOn que hace lo
-siguiente:</p>
-
-- Toma una función como parametro
+# spyOn
+## Introducción
+Implementa tu propia versión de la función **spyOn** que hace lo siguiente:
+- Toma una función como parámetro
 - Devuelve una función spy que toma cualquier numero de argumentos
 - spy llama a la función y devuelve lo que ella devuelve
-- spy tiene los siguientes metodos:
-    - .getCallCount(): Devuelve la cantidad de veces que el spy fue llamado
-    - .wasCalledWith(val): devuelve true si la función fue alguna vez llamada con ese valor, else false
-    - .returned(val) devuelve true si alguna vez devolvió ese valor.
+- spy tiene los siguientes métodos:
+    - **.getCallCount()**: Devuelve la cantidad de veces que el spy fue llamado
+    - **.wasCalledWith(val)**: devuelve true si la función fue alguna vez llamada con ese valor, else false
+    - **.returned(val)**: devuelve true si alguna vez devolvió ese valor.
 
-<br/>
-<br/>
-<h2> Ejemplos: </h2>
-<pre><code>function adder(n1, n2) { return n1 + n2; }
+#### Ejemplos:
+```javascript
+function adder(n1, n2) { return n1 + n2; }
 
 const adderSpy = spyOn( adder );
 
@@ -38,12 +34,10 @@ adderSpy.wasCalledWith(2); // true
 adderSpy.wasCalledWith(0); // false
 adderSpy.returned(6); // true
 adderSpy.returned(9); // false
-</code></pre>
-<br/>
-<br/>
-<h1> Solución</h1>
-<br/>
-<pre><code>
+```
+
+## Solución
+```javascript
 const spyOn = (fn) => {
     let callCount = 0;
     const calledWith = new Set();
@@ -60,4 +54,7 @@ const spyOn = (fn) => {
     spy.returned = (val) => returns.has(val);
     return spy;
 }
-</code></pre>
+```
+
+## Código
+Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/KUom).

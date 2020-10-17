@@ -33,7 +33,7 @@ En este caso, analizáremos dos alternativas diferentes, luego determináremos c
   2. Si no, seguimos avanzando
 3. Si uno de los indices llego al final, hemos finalizado el recorrido y no existen dos valores en el arreglo que logren la suma esperada
 
-### Primer alternativa
+### Primer alternativa: Solución naive
 ```javascript
 functionsumArray (arr, n) {
     // Itero sobre el arreglo
@@ -53,7 +53,7 @@ Complejidad Temporal | Complejidad Espacial
 --|--
 O(n^2)|O(1)
 
-### Segunda alternativa
+### Segunda alternativa: Mejor solución
 ```javascript
 function sumArray2 (arr, n) {
     // Creo un puntero para el principio y el final
@@ -78,11 +78,6 @@ function sumArray2 (arr, n) {
 Complejidad Temporal | Complejidad Espacial
 --|--
 O(n)|O(1)
-
-#### ¿Qué solución es mejor?
-En primer lugar lo que podemos hacer es analizar complejidades, tanto temporales como espaciales. Al ver ambas soluciones vemos que la complejidad espacial es mantiene, pero no así, la complejidad temporal.       
-En el primer caso, la complejidad temporal es de orden n^2. ¿Por qué? Porque estamos recorriendo el mismo arreglo dos veces, mientras que en la segunda solución utilizamos dos indices para recorrer el mismo arreglo, una unica vez.
-Partiendo de esta base, ya sabemos que **la segunda solución es mejor** que la primera.
 
 ## Código
 Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/Jh9N/0).

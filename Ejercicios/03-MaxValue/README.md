@@ -16,15 +16,8 @@ Se nos presenta un arreglo de enteros, estos representan el valor de una acción
 Esta ganancia la obtenemos comprando la acción cuando su valor es de 2 y vendiéndola cuando a 11.
 
 ## Solución
-### En palabras
-Para la resolución de este problema necesitamos identificar cuales son los elementos mas importantes a tener en cuenta.
-1. Recorrer el arreglo de valores
-2. Encontrar aquellos dos que, al restarlos, generen la mayor diferencia
-3. Al terminar el recorrido, retornar la mayor diferencia obtenida
 
-### Primer alternativa
-Como todo ejercicio, existen multiples soluciones. En este primer caso evaluaremos la posibilidad de resolver el ejercicio a través de fuerza bruta.
-
+### Primer alternativa: Solución Fuerza Bruta
 ```javascript
 const maxValue = (stocks) => {
     // guardamos la primer diferencia
@@ -49,9 +42,7 @@ Complejidad Temporal | Complejidad Espacial
 O(n^2)|O(1)
 
 
-### Segunda alternativa
-En esta oportunidad, haremos un único recorrido sobre el arreglo. Esto nos da la capacidad de disminuir el orden de complejidad temporal. Como ya sabemos, disminuir la complejidad nos da la capacidad de generar código mas eficiente y por lo tanto mas escalable.
-
+### Segunda alternativa: Solución Optima
 ```javascript
 const maxValue2 = (stocks) => {
     // guardamos la primer diferencia
