@@ -16,7 +16,7 @@ Es decir, el objetivo del ejercicio es determinar si el primer string, needle, e
 ###### Lo encuentra
 **needle**: redux       
 **haystack**: react-redux        
-**output**: 5          
+**output**: 6       
 
 ###### No lo encuentra
 **needle**: puntual           
