@@ -20,10 +20,10 @@ const book = {
 ```
 
 findWordsStartingWith **(book, 'de')**   
-**output:** [23, 112]
+**output:** [23]
 
 findWordsStartingWith **(book, 'un')**   
-**output:** [ 6, 14, 43, 99, 115 ]
+**output:** [ 6, 14, 43]
 
 
 ## Solución
