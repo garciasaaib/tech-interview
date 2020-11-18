@@ -140,7 +140,7 @@ Todas las soluciones son de complejidad:
 
 Complejidad Temporal | Complejidad Espacial
 --|--
-O(n^2)|O(n^2)
+O(2^n)|O(2^n)
 
 Aunque algunas sean mas óptimas que otras, en el peor de los casos, hay que recorrer todo el arreglo, y no tener ninguna suma repetida.
 
