@@ -16,19 +16,19 @@ Dada una suma objetiva, 'target' y un arreglo de números positivos:
 Cada número en el arreglo solo se puede usar una vez.
 
 #### Ejemplos:
-subsetSum( **9, [1,10,5,3]** );    
+subsetSum( **[1,10,5,3], 9** );    
 **output**: true <= 1 + 5 + 3
 
-subsetSum( **19, [1,10,5,3]** );     
+subsetSum( **[1,10,5,3], 19** );     
 **output**:true <= add all 4
 
-subsetSum( **17, [1,10,5,3]** );      
+subsetSum( **[1,10,5,3], 17** );      
 **output**:false
 
-subsetSum( **2, [1,10,5,3]** );      
+subsetSum( **[1,10,5,3], 2** );      
 **output**:false
 
-subsetSum( **10, [1,10,5,3]** );      
+subsetSum( **[1,10,5,3], 10** );      
 **output**:true <= 10 + 0 = 10
 
 ## Solución
