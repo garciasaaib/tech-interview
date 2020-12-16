@@ -25,6 +25,9 @@ Es decir, el objetivo del ejercicio es determinar si el primer string, needle, e
 
 En este caso, como el needle no se encuentra en el haystack el valor de salida es -1.
 
+#### IMPORTANTE
+Para la resolución de este ejercicio no se puede utilizar la función preexistente: <b>indexOf( )</b>
+
 
 ## Solución
 ### En palabras
@@ -35,9 +38,6 @@ En este caso, como el needle no se encuentra en el haystack el valor de salida e
         1. Si llegamos al final del needle es que encontramos el indice
 3. Si el primer caracter del needle no coincide, avanzo al próximo caracter
 4. Llegamos al final del haystack y no encontramos ninguna coincidencia     
-
-#### IMPORTANTE
-Para la resolución de este ejercicio no se puede utilizar la función preexistente: <b>indexOf( )</b>
 
 ### Primer Alternativa
 Ahora si, busquemos la forma de traducir lo que ya dijimos en palabras a código.<br/>
