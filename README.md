@@ -21,7 +21,7 @@
 - [07-SolveGraph](/Ejercicios/07-SolveGraph/)
 - [08-FindWordStartingWith](/Ejercicios/08-FindWordStartingWith/)
 - [09-BinaryToDecimal](Ejercicios/09-BinaryToDecimal/)
-- [10-DecimalToBinary](/Ejercicios/10-DecimalToBinary/)
+- [10-DecimalToBinary](Ejercicios/10-DecimalToBynary/)
 - [11-ClockMinuteAdder](/Ejercicios/11-ClockMinuteAdder/)
 - [12-Intersection](/Ejercicios/12-Intersection/)
 - [13-SubSetSum](/Ejercicios/13-SubSetSum/)
