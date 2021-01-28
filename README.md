@@ -15,7 +15,7 @@
 - [01-FindNeedle](/Ejercicios/01-FindNeedle/)
 - [02-SumArray](/Ejercicios/02-SumArray/)
 - [03-MaxValue](/Ejercicios/03-MaxValue/)
-- [04-MultidimensionalSumArray](/Ejercicios/04-MultidimenasionalSumArray/)
+- [04-MultidimensionalSumArray](/Ejercicios/04-MultidimensionalSumArray)
 - [05-MinStack](Ejercicios/05-MinStack/)
 - [06-HasBalanceBrackets](/Ejercicios/06-HasBalanceBrackets/)
 - [07-SolveGraph](/Ejercicios/07-SolveGraph/)
