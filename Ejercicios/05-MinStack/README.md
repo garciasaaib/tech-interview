@@ -38,25 +38,30 @@ class Node{
         this.next = null;  
     }
 }
-classStack{
+
+class Stack{
     constructor(value) {
         this.top = null;  
-    }  push(val) {
+    }  
+    
+    push(val) {
         if(!this.top) this.top = new Node(val);
         else {
             const newTop = new Node(val);      
             newTop.next = this.top;
             this.top = newTop;    
             }  
-        }  
-        pop() {
+    }  
+
+    pop() {
             const oldTop = this.top;
             this.top = oldTop && oldTop.next;
             return oldTop && oldTop.value;  
-            }  
-        peek() {
+    }  
+    
+    peek() {
             return this.top && this.top.value  
-        }
+    }
 }
 ```
 
@@ -69,6 +74,7 @@ class MinStack extends Stack{
         super();
         this.minimum = new Stack();   
         }  
+    
     push(val) {
         if(!this.top) {
             this.top = new Node(val);
@@ -82,11 +88,13 @@ class MinStack extends Stack{
             else this.minimum.push(this.minimum.peek());    
         }  
     }  
+    
     pop() {
         const oldTop = this.top;
         this.top = oldTop && oldTop.next;
         this.minimum.pop();return oldTop && oldTop.value;  
     }  
+    
     min() {
         return this.minimum.peek();  
     }
