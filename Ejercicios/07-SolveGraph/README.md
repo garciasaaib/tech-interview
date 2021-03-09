@@ -92,20 +92,22 @@ s: ['a', 'c'],
 r: ['d'],
 z: ['z']
 };
+
 function solveGraphBFS(graph, start, end, visited = {}, queue = []) {
-    // nos fijamos si ya visitamos este vértice
-    if (visited[start]) return false;
-    // lo agregamos a los visitados
+    if (!visited[start]) {
+      for (let i = 0; i < graph[start].length; i += 1) {
+        // agregamos todas sus conexiones al queue
+        queue.push(graph[start][i]);
+      }
+    }
     visited[start] = true;
-    // iteramos sobre el arreglo de vértices
-    for (let i = 0; i < graph[start].length; i += 1) {
-    // agregamos todas sus conexiones al queue
-    queue.push(graph[start][i]);
+    if(queue.length != 0) {
+      return queue[0] === end || solveGraphBFS(graph, queue.shift(), end, visited, queue);
+    } else {
+      return false;
+    }
 }
-// comparamos si el siguiente del queue es nuestro target
-// sino llamamos recursivamente a la función con el start del siguiente del queue
-return queue[0] === end || solveGraphBFS(graph, queue.shift(), end, visited, queue);
-}
+
 solveGraphBFS(graph, 'a', 'r'); // true
 solveGraphBFS(graph, 's', 'b'); // false
 ```
