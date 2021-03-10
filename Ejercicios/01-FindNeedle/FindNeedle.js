@@ -5,7 +5,7 @@
 //
 //haystack: react-redux
 //
-//output: 5
+//output: 6
 //
 //needle: puntual
 //
