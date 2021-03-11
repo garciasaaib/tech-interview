@@ -10,8 +10,9 @@ Para poder comprender el objetivo de esta actividad necesitamos saber **¿Qué e
 
 En este caso, el ejercicio es implementar un stack que tenga los siguientes métodos:
 1. **push(value) :** añadir el elemento, value, al stack.
-2. **pop ( ) :** sacar un elemento del stack.
-3. **min ( ) :** obtener el elemento con el valor mínimo.
+2. **pop() :** sacar un elemento del stack.
+3. **min() :** obtener el elemento con el valor mínimo.
+4. **peek():** obtener el elemento que está el en top del Stack
 
 #### Importante
 * **TODOS** los métodos mencionados anteriormente deben ser de O(1).
@@ -43,7 +44,7 @@ class Stack{
     constructor(value) {
         this.top = null;  
     }  
-    
+
     push(val) {
         if(!this.top) this.top = new Node(val);
         else {
@@ -58,7 +59,7 @@ class Stack{
             this.top = oldTop && oldTop.next;
             return oldTop && oldTop.value;  
     }  
-    
+
     peek() {
             return this.top && this.top.value  
     }
@@ -74,7 +75,7 @@ class MinStack extends Stack{
         super();
         this.minimum = new Stack();   
         }  
-    
+
     push(val) {
         if(!this.top) {
             this.top = new Node(val);
@@ -88,13 +89,13 @@ class MinStack extends Stack{
             else this.minimum.push(this.minimum.peek());    
         }  
     }  
-    
+
     pop() {
         const oldTop = this.top;
         this.top = oldTop && oldTop.next;
         this.minimum.pop();return oldTop && oldTop.value;  
     }  
-    
+
     min() {
         return this.minimum.peek();  
     }

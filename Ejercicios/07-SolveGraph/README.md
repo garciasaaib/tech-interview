@@ -46,6 +46,13 @@ Como observamos, en la imagen de la izquierda el nodo 'a' se conecta con el nodo
 
 ### Solución depth-first
 
+Grafo utilizado para la resolución:
+
+<p align="center">
+  <img src="../../images/graph-exercise.png" />
+</p>
+
+
 ```javascript
 const graph = {
 a: ['c'],
