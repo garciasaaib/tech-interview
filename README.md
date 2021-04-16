@@ -17,7 +17,7 @@
 - [03-MaxValue](/Ejercicios/03-MaxValue/)
 - [04-MultidimensionalSumArray](/Ejercicios/04-MultidimensionalSumArray)
 - [05-MinStack](Ejercicios/05-MinStack/)
-- [06-HasBalanceBrackets](/Ejercicios/06-HasBalanceBrackets/)
+- [06-HasBalanceBrackets](/Ejercicios/06-HasBalancedBrackets/)
 - [07-SolveGraph](/Ejercicios/07-SolveGraph/)
 - [08-FindWordStartingWith](/Ejercicios/08-FindWordStartingWith/)
 - [09-BinaryToDecimal](Ejercicios/09-BinaryToDecimal/)
