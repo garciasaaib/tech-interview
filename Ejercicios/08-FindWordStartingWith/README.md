@@ -156,7 +156,7 @@ O(n+m)|O(1)
 ### Buscar si el TRIE ya fue construido
 Complejidad Temporal | Complejidad Espacial
 --|--
-O(m)|O(1
+O(m)|O(1)
 
 ## Código
 Pueden encontrar las soluciones recién mencionadas en el siguiente [link](https://repl.it/JvdR/9).
