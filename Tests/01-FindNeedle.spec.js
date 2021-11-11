@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const FindNeedle = require("../Ejercicios/01-FindNeedle/FindNeedle");
 
-describe("FindNeedle", function () {
+xdescribe("FindNeedle", function () {
   it("should return 6 if needle is redux and haystack react-redux", function () {
     expect(FindNeedle("react-redux", "redux")).to.equal(6);
   });
